@@ -1,0 +1,9 @@
+{
+	"name": "rt-de-adf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f635f1d8-80dd-4f9a-99bd-0360421cab31",
+		"tenantId": "b8d181b7-58fc-42cc-8853-9c4880ddfada"
+	}
+}
