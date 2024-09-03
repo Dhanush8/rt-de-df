@@ -60,7 +60,7 @@
 					"server": "[parameters('onpremsqlserver_properties_typeProperties_server')]",
 					"database": "[parameters('onpremsqlserver_properties_typeProperties_database')]",
 					"encrypt": "mandatory",
-					"trustServerCertificate": false,
+					"trustServerCertificate": true,
 					"authenticationType": "SQL",
 					"userName": "[parameters('onpremsqlserver_properties_typeProperties_userName')]",
 					"password": {
@@ -330,7 +330,7 @@
 										"source": {
 											"type": "SqlServerSource",
 											"sqlReaderQuery": {
-												"value": "@{concat('SELECT * FROM' , item().SchemaName,',',item().TableName)}",
+												"value": "@{concat('SELECT * FROM ' , item().SchemaName,'.',item().TableName)}",
 												"type": "Expression"
 											},
 											"queryTimeout": "02:00:00",
