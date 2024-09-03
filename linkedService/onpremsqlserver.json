@@ -7,7 +7,7 @@
 			"server": "LAPTOP-B12IOBPU\\SQLEXPRESS",
 			"database": "AdventureWorksLT2017",
 			"encrypt": "mandatory",
-			"trustServerCertificate": false,
+			"trustServerCertificate": true,
 			"authenticationType": "SQL",
 			"userName": "Kasun",
 			"password": {
