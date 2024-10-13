@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
 		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://realtimedatalakegen2.dfs.core.windows.net/"
+		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"type": "string",
 			"defaultValue": "https://rt-de-key.vault.azure.net/"
@@ -27,9 +31,9 @@
 			"type": "string",
 			"defaultValue": "Kasun"
 		},
-		"AzureDataLakeStorage1_properties_typeProperties_url": {
+		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
 			"type": "string",
-			"defaultValue": "https://realtimedatalakegen2.dfs.core.windows.net/"
+			"defaultValue": "1013-164440-jbkj9bj"
 		},
 		"containerUri": {
 			"type": "string",
@@ -47,7 +51,7 @@
 		{
 			"name": "rt-de-adf_ArmTemplate_0",
 			"type": "Microsoft.Resources/deployments",
-			"apiVersion": "2018-02-01",
+			"apiVersion": "2024-03-01",
 			"properties": {
 				"mode": "incremental",
 				"templateLink": {
@@ -61,11 +65,11 @@
 					"AzureDataLakeStorage1_accountKey": {
 						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
 					},
-					"AzureKeyVault1_properties_typeProperties_baseUrl": {
-						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
-					},
 					"AzureDataLakeStorage1_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"AzureKeyVault1_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
 					},
 					"onpremsqlserver_properties_typeProperties_server": {
 						"value": "[parameters('onpremsqlserver_properties_typeProperties_server')]"
@@ -75,6 +79,9 @@
 					},
 					"onpremsqlserver_properties_typeProperties_userName": {
 						"value": "[parameters('onpremsqlserver_properties_typeProperties_userName')]"
+					},
+					"AzureDatabricks1_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('AzureDatabricks1_properties_typeProperties_existingClusterId')]"
 					}
 				}
 			},
