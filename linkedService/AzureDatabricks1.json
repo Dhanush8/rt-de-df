@@ -11,9 +11,9 @@
 					"referenceName": "AzureKeyVault1",
 					"type": "LinkedServiceReference"
 				},
-				"secretName": "dbtoken"
+				"secretName": "adbtoken"
 			},
-			"existingClusterId": "1013-164440-jbkj9bj"
+			"existingClusterId": "0221-185356-o6uk5uxx"
 		}
 	}
 }
