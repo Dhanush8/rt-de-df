@@ -1,0 +1,32 @@
+{
+	"name": "sheduled_trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "copy_all_tables",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2025-03-19T17:45:00",
+				"timeZone": "Sri Lanka Standard Time",
+				"schedule": {
+					"minutes": [
+						40
+					],
+					"hours": [
+						23
+					]
+				}
+			}
+		}
+	}
+}
